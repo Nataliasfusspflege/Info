@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Natalias Mobile Fußpflege</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal-deep:   #2a9a8f;
+      --teal-mid:    #4db8ae;
+      --teal-light:  #c4eae7;
+      --teal-pale:   #eef9f8;
+      --text-dark:   #1c3b38;
+      --text-muted:  #5a8a84;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      background: var(--teal-pale);
+      color: var(--text-dark);
+    }
+
+    /* ── Layout ── */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: stretch;
+    }
+
+    /* Left / Info panel */
+    .info {
+      flex: 0 0 42%;
+      background: white;
+      padding: 4rem 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--teal-light);
+    }
+
+    .info .badge {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 1.4rem;
+    }
+
+    .info h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--teal-deep);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .info p {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+      max-width: 30ch;
+      margin-bottom: 2.5rem;
+    }
+
+    .divider {
+      width: 2.5rem;
+      height: 1px;
+      background: var(--teal-mid);
+      margin-bottom: 2rem;
+    }
+
+    .audience-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 0.5rem;
+    }
+
+    .audience {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact a {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+      text-decoration: none;
+      line-height: 2;
+      transition: color 0.2s;
+    }
+    .contact a:hover { color: var(--teal-deep); }
+    .contact a::before {
+      content: attr(data-icon);
+      margin-right: 0.6rem;
+      color: var(--teal-mid);
+      font-style: normal;
+    }
+
+    /* Right / Services panel */
+    .services {
+      flex: 1;
+      background: var(--teal-pale);
+      padding: 4rem 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .services h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 2rem;
+    }
+
+    .service-list {
+      list-style: none;
+    }
+
+    .service-list li {
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+      color: var(--text-dark);
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--teal-light);
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .service-list li:last-child { border-bottom: none; }
+
+    .service-list li::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--teal-mid);
+      flex-shrink: 0;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 700px) {
+      .page { flex-direction: column; }
+
+      .info {
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid var(--teal-light);
+        padding: 3rem 2rem;
+      }
+
+      .info p { max-width: 100%; }
+
+      .services {
+        padding: 2.5rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Info -->
+    <div class="info">
+      <span class="badge">Mobile Fußpflege</span>
+      <h1>Natalias<br>Mobile<br>Fußpflege</h1>
+      <p>Professionelle Fußpflege bequem bei Ihnen zu Hause — zuverlässig, sorgfältig und individuell abgestimmt.</p>
+
+      <div class="divider"></div>
+
+      <div class="audience-label">Für wen</div>
+      <div class="audience">
+        Senioren &amp; Menschen mit eingeschränkter Mobilität,<br>
+        die eine professionelle Fußpflege direkt zu Hause wünschen.
+      </div>
+
+      <div class="contact">
+        <a href="tel:+49000000000" data-icon="↗">+49 (0) 000 000 000</a>
+        <a href="mailto:info@natalia-fusspflege.de" data-icon="↗">info@natalia-fusspflege.de</a>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="services">
+      <h2>Leistungen</h2>
+      <ul class="service-list">
+        <li>Fußbad</li>
+        <li>Nägel kürzen und in Form bringen</li>
+        <li>Nagelpflege bei leichtem Nagelpilz</li>
+        <li>Entfernung von Hornhaut</li>
+        <li>Behandlung von Hühneraugen</li>
+        <li>Kleine Fußmassage</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
