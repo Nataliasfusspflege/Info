@@ -9,9 +9,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --teal-deep:   #2a9a8f;
-      --teal-mid:    #4db8ae;
-      --teal-light:  #c4eae7;
+      --teal-text:   #2dd7d5;
       --teal-pale:   #eef9f8;
       --text-dark:   #1c3b38;
       --text-muted:  #5a8a84;
@@ -44,7 +42,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      border-right: 1px solid var(--teal-light);
+      border-right: 1px solid var(--teal-text);
     }
 
     .info-header {
@@ -72,14 +70,14 @@
       font-size: clamp(1.6rem, 2.8vw, 2.5rem);
       font-weight: 300;
       font-style: italic;
-      color: var(--teal-deep);
+      color: var(--teal-text);
       line-height: 1.15;
     }
 
     .info p {
       font-size: 0.9rem;
       line-height: 1.75;
-      color: var(--text-muted);
+      color: var(--text-text);
       max-width: 30ch;
       margin-bottom: 2.5rem;
     }
@@ -87,7 +85,7 @@
     .divider {
       width: 2.5rem;
       height: 1px;
-      background: var(--teal-mid);
+      background: var(--teal-text);
       margin-bottom: 2rem;
     }
 
@@ -95,13 +93,13 @@
       font-size: 0.65rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--teal-mid);
+      color: var(--teal-text);
       margin-bottom: 0.5rem;
     }
 
     .audience {
       font-size: 0.85rem;
-      color: var(--text-muted);
+      color: var(--text-text);
       line-height: 1.6;
       margin-bottom: 2.5rem;
     }
@@ -111,21 +109,21 @@
       align-items: center;
       gap: 0.6rem;
       font-size: 0.85rem;
-      color: var(--text-dark);
+      color: var(--text-text);
       text-decoration: none;
       line-height: 2;
       transition: color 0.2s;
     }
-    .contact a:hover { color: var(--teal-deep); }
+    .contact a:hover { color: var(--teal-dark); }
     .contact a svg {
-      color: var(--teal-mid);
+      color: var(--teal-text);
       flex-shrink: 0;
     }
 
     /* Right / Services panel */
     .services {
       flex: 1;
-      background: var(--teal-pale);
+      background: var(--teal-text);
       padding: 4rem 3.5rem;
       display: flex;
       flex-direction: column;
@@ -138,7 +136,7 @@
       font-weight: 400;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--teal-mid);
+      color: var(--teal-text);
       margin-bottom: 2rem;
     }
 
@@ -148,9 +146,9 @@
 
     .service-list li {
       font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-      color: var(--text-dark);
+      color: var(--text-text);
       padding: 0.9rem 0;
-      border-bottom: 1px solid var(--teal-light);
+      border-bottom: 1px solid var(--teal-text);
       display: flex;
       align-items: center;
       gap: 0.9rem;
@@ -164,7 +162,7 @@
       width: 4px;
       height: 4px;
       border-radius: 50%;
-      background: var(--teal-mid);
+      background: var(--teal-text);
       flex-shrink: 0;
     }
 
@@ -175,7 +173,7 @@
       .info {
         flex: none;
         border-right: none;
-        border-bottom: 1px solid var(--teal-light);
+        border-bottom: 1px solid var(--teal-text);
         padding: 3rem 2rem;
       }
 
@@ -211,11 +209,11 @@
       <div class="contact">
         <a href="tel:+49000000000">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 .99 3.36 2 2 0 0 1 2.96 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +49 (0) 000 000 000
+          0152 53365359
         </a>
         <a href="mailto:info@natalia-fusspflege.de">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-          info@natalia-fusspflege.de
+          solotaja@gmx.net
         </a>
       </div>
     </div>
